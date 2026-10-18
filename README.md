@@ -1,1 +1,1 @@
-# -chorus-judge-prototype
+# chorus-judge-prototype
