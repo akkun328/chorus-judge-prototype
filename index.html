@@ -3,11 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>審査講評システム</title>
-<meta http-equiv="refresh" content="0; url=prototype.html">
-<script>location.replace('prototype.html');</script>
+<title>審査講評システム v9</title>
+<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f3f5f7}iframe{display:block;border:0;width:100%;height:100%}</style>
 </head>
 <body>
-<p><a href="prototype.html">審査講評システムを開く</a></p>
+<iframe id="app" src="prototype.html" title="岩手県合唱コンクール 審査講評システム"></iframe>
+<script>
+const app=document.getElementById('app');
+app.addEventListener('load',()=>{
+  try{
+    const d=app.contentDocument;
+    d.title='審査講評システム 実用プロトタイプ v9';
+    const link=d.createElement('link');link.rel='stylesheet';link.href='patch-v9.css?v=9';d.head.appendChild(link);
+    const script=d.createElement('script');script.src='patch-v9.js?v=9';d.body.appendChild(script);
+  }catch(e){console.error(e)}
+});
+</script>
 </body>
 </html>
